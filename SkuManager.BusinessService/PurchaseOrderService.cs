@@ -54,22 +54,22 @@ namespace SkuManager.BusinessService
             {
                 if (SessionManager.PromotionList == null)
                 {
-                    List<Promotion> promotionList = _service.GetPromotions();
+                    List<Promotion> promotionList = new MasterService().GetPromotions();
                     SessionManager.PromotionList = promotionList;
                 }
                 if (SessionManager.PromotionDetailsList == null)
                 {
-                    List<PromotionDetails> promotionDetailsList = _service.GetAllPromotionDetailsByPromotionId();
+                    List<PromotionDetails> promotionDetailsList = new MasterService().GetAllPromotionDetailsByPromotionId();
                     SessionManager.PromotionDetailsList = promotionDetailsList;
                 }
                 if (SessionManager.PromotionTypeList == null)
                 {
-                    List<PromotionType> promotionTypeList = _service.GetPromotionTypes();
+                    List<PromotionType> promotionTypeList = new MasterService().GetPromotionTypes();
                     SessionManager.PromotionTypeList = promotionTypeList;
                 }
                 if (SessionManager.SkuList == null)
                 {
-                    List<SkuModel> skuList = _service.GetAllSku();
+                    List<SkuModel> skuList = new MasterService().GetAllSku();
                     SessionManager.SkuList = skuList;
                 }
                 SessionManager.IsItemLocked = false;

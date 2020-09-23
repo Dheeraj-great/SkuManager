@@ -34,7 +34,7 @@ namespace SkuManager.BusinessService
                         PromotionTypeId = Convert.ToInt64(Convert.ToString(reader["PromotionTypeId"])),
                         Name = Convert.ToString(reader["Name"]),
                         IsActive = Convert.ToBoolean(Convert.ToString(reader["IsActive"])),
-                        Rate = Convert.ToDecimal(Convert.ToString(reader["UnitPrice"])),
+                        Rate = Convert.ToDecimal(Convert.ToString(reader["Rate"])),
                     });
                 }
                 connection.Close();

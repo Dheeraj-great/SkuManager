@@ -1,31 +1,44 @@
-﻿@{
+﻿@model string
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
+<br/>
+<div class="row"><div class="col-sm-12 well"><strong>Test Cases as per the requirement document</strong></div></div>
+<br/>
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Scenario A</strong></div>
+            <div class="panel-body">
+                <strong>1 * A = 50<br/>1 * B = 30<br/>1 * C = 20<br/>Total 100</strong>
+                <br/>
+                <a href="@Url.Action("Test", "Home", new { scenario = "A" })">Click Here To Test</a>
+            </div>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Scenario B</strong></div>
+            <div class="panel-body">
+                <strong>5 * A = 130 + 2 * 50<br />5 * B = 45 + 45 + 30<br />1 * C = 20<br />Total 370</strong>
+                <br />
+                <a href="@Url.Action("Test", "Home", new { scenario = "B" })">Click Here To Test</a>
+            </div>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Scenario C</strong></div>
+            <div class="panel-body">
+                <strong>3 * A = 130<br />5 * B = 45 + 45 + 1 * 30<br />1 * C = - <br />1 * D = 30<br />Total 280</strong>
+                <br />
+                <a href="@Url.Action("Test", "Home", new { scenario = "C" })">Click Here To Test</a>
+            </div>
+        </div>
     </div>
+</div>
+<div class="row">
+    <strong>Test Result : @Model</strong>
 </div>

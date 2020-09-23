@@ -14,7 +14,7 @@ namespace SkuManager.BusinessService
         public static List<Promotion> PromotionList { 
             get
             {
-                return HttpContext.Current.Session["PromotionList"] == null ? new List<Promotion>() : (List<Promotion>)HttpContext.Current.Session["PromotionList"];
+                return HttpContext.Current.Session["PromotionList"] == null ? null : (List<Promotion>)HttpContext.Current.Session["PromotionList"];
             }
             set {
                 HttpContext.Current.Session["PromotionList"] = value;
@@ -24,7 +24,7 @@ namespace SkuManager.BusinessService
         public static List<PromotionDetails> PromotionDetailsList { 
             get
             {
-                return HttpContext.Current.Session["PromotionDetailsList"] == null ? new List<PromotionDetails>() : (List<PromotionDetails>)HttpContext.Current.Session["PromotionDetailsList"];
+                return HttpContext.Current.Session["PromotionDetailsList"] == null ? null : (List<PromotionDetails>)HttpContext.Current.Session["PromotionDetailsList"];
             }
             set {
                 HttpContext.Current.Session["PromotionDetailsList"] = value;
@@ -35,7 +35,7 @@ namespace SkuManager.BusinessService
         {
             get
             {
-                return HttpContext.Current.Session["PromotionTypeList"] == null ? new List<PromotionType>() : (List<PromotionType>)HttpContext.Current.Session["PromotionTypeList"];
+                return HttpContext.Current.Session["PromotionTypeList"] == null ? null : (List<PromotionType>)HttpContext.Current.Session["PromotionTypeList"];
             }
             set
             {
@@ -47,7 +47,7 @@ namespace SkuManager.BusinessService
         {
             get
             {
-                return HttpContext.Current.Session["SkuList"] == null ? new List<SkuModel>() : (List<SkuModel>)HttpContext.Current.Session["SkuList"];
+                return HttpContext.Current.Session["SkuList"] == null ? null : (List<SkuModel>)HttpContext.Current.Session["SkuList"];
             }
             set
             {
