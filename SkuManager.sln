@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkuManager.WebApp", "SkuMan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkuManager.FrameWorkModels", "SkuManager.FrameWorkModels\SkuManager.FrameWorkModels.csproj", "{6B9D7AAC-4725-4C04-A7BD-2C7D096A6DED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkuManager.UnitTest", "SkuManager.UnitTest\SkuManager.UnitTest.csproj", "{0A91D25A-27D2-4184-9810-C8F3880BC81D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6B9D7AAC-4725-4C04-A7BD-2C7D096A6DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B9D7AAC-4725-4C04-A7BD-2C7D096A6DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B9D7AAC-4725-4C04-A7BD-2C7D096A6DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A91D25A-27D2-4184-9810-C8F3880BC81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A91D25A-27D2-4184-9810-C8F3880BC81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A91D25A-27D2-4184-9810-C8F3880BC81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A91D25A-27D2-4184-9810-C8F3880BC81D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

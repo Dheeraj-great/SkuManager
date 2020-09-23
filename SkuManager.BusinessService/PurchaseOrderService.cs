@@ -183,20 +183,27 @@ namespace SkuManager.BusinessService
                 }
             }
 
-            long? minPurchaseQuantity = comboSkuList.Select(q => q.PurchaseQuantity).Min();
-            foreach (SkuModel sku in comboSkuList)
+            if(comboSkuList.Count > 1)
             {
-                if (!SessionManager.IsItemLocked.Value)
+                long? minPurchaseQuantity = comboSkuList.Select(q => q.PurchaseQuantity).Min();
+                foreach (SkuModel sku in comboSkuList)
                 {
-                    skuAmount = GetSkuAmount(sku.Id);
-                }
-                if (sku.PurchaseQuantity - minPurchaseQuantity != 0)
-                {
-                    skuAmount = skuAmount + 
-                        (SessionManager.SkuList.Where(q => q.Id == sku.Id).Any() ? SessionManager.SkuList.FirstOrDefault(q => q.Id == sku.Id).UnitPrice.Value * (sku.PurchaseQuantity.Value - minPurchaseQuantity.Value) : 0);
+                    if (!SessionManager.IsItemLocked.Value)
+                    {
+                        skuAmount = GetSkuAmount(sku.Id);
+                    }
+                    if (sku.PurchaseQuantity - minPurchaseQuantity != 0)
+                    {
+                        skuAmount = skuAmount +
+                            (SessionManager.SkuList.Where(q => q.Id == sku.Id).Any() ? SessionManager.SkuList.FirstOrDefault(q => q.Id == sku.Id).UnitPrice.Value * (sku.PurchaseQuantity.Value - minPurchaseQuantity.Value) : 0);
+                    }
                 }
             }
-
+            else if(comboSkuList.Count > 0)
+            {
+                skuAmount = skuAmount +
+                            (SessionManager.SkuList.Where(q => q.Id == comboSkuList[0].Id).Any() ? SessionManager.SkuList.FirstOrDefault(q => q.Id == comboSkuList[0].Id).UnitPrice.Value * (comboSkuList[0].PurchaseQuantity.Value) : 0);
+            }
             return skuAmount;
         }
 
