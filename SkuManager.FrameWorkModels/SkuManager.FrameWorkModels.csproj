@@ -72,6 +72,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sku.tt</DependentUpon>
     </Compile>
+    <Compile Include="UI\Promotion\Promotion.cs" />
+    <Compile Include="UI\Sku\CartModel.cs" />
     <Compile Include="UI\Sku\SkuModel.cs" />
   </ItemGroup>
   <ItemGroup>
