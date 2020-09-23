@@ -13,21 +13,21 @@ namespace SkuManager.FrameWorkModels
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SKUEntities : DbContext
+    public partial class SKUCS : DbContext
     {
-        public SKUEntities()
-            : base("name=SKUEntities")
+        public SKUCS()
+            : base("server=.;database=SKU;Integrated Security=SSPI;")
         {
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            //throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Promotion> Promotions { get; set; }
-        public DbSet<PromotionDetail> PromotionDetails { get; set; }
-        public DbSet<PromotionType> PromotionTypes { get; set; }
-        public DbSet<Sku> Skus { get; set; }
+        public DbSet<Promotion> Promotion { get; set; }
+        public DbSet<PromotionDetails> PromotionDetails { get; set; }
+        public DbSet<PromotionType> PromotionType { get; set; }
+        public DbSet<Sku> Sku { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace SkuManager.FrameWorkModels
     {
         public Promotion()
         {
-            this.PromotionDetails = new HashSet<PromotionDetail>();
+            this.PromotionDetails = new HashSet<PromotionDetails>();
         }
     
         public long Id { get; set; }
@@ -26,6 +26,6 @@ namespace SkuManager.FrameWorkModels
         public bool IsActive { get; set; }
     
         public virtual PromotionType PromotionType { get; set; }
-        public virtual ICollection<PromotionDetail> PromotionDetails { get; set; }
+        public virtual ICollection<PromotionDetails> PromotionDetails { get; set; }
     }
 }

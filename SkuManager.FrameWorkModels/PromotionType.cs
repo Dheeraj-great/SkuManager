@@ -16,13 +16,13 @@ namespace SkuManager.FrameWorkModels
     {
         public PromotionType()
         {
-            this.Promotions = new HashSet<Promotion>();
+            this.Promotion = new HashSet<Promotion>();
         }
     
         public long Id { get; set; }
         public string Name { get; set; }
         public bool IsActive { get; set; }
     
-        public virtual ICollection<Promotion> Promotions { get; set; }
+        public virtual ICollection<Promotion> Promotion { get; set; }
     }
 }

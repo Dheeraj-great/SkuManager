@@ -45,32 +45,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Promotion.cs">
-      <DependentUpon>SKU.tt</DependentUpon>
+      <DependentUpon>Sku.tt</DependentUpon>
     </Compile>
-    <Compile Include="PromotionDetail.cs">
-      <DependentUpon>SKU.tt</DependentUpon>
+    <Compile Include="PromotionDetails.cs">
+      <DependentUpon>Sku.tt</DependentUpon>
     </Compile>
     <Compile Include="PromotionType.cs">
-      <DependentUpon>SKU.tt</DependentUpon>
+      <DependentUpon>Sku.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SKU.Context.cs">
+    <Compile Include="Sku.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SKU.Context.tt</DependentUpon>
+      <DependentUpon>Sku.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Sku.cs">
-      <DependentUpon>SKU.tt</DependentUpon>
+      <DependentUpon>Sku.tt</DependentUpon>
     </Compile>
-    <Compile Include="SKU.Designer.cs">
+    <Compile Include="Sku.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SKU.edmx</DependentUpon>
+      <DependentUpon>Sku.edmx</DependentUpon>
     </Compile>
-    <Compile Include="SKU1.cs">
+    <Compile Include="Sku1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SKU.tt</DependentUpon>
+      <DependentUpon>Sku.tt</DependentUpon>
     </Compile>
     <Compile Include="UI\Sku\SkuModel.cs" />
   </ItemGroup>
@@ -80,31 +80,29 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="SKU.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SKU.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="SKU.edmx.diagram">
-      <DependentUpon>SKU.edmx</DependentUpon>
+    <EntityDeploy Include="Sku.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Sku.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Sku.edmx.diagram">
+      <DependentUpon>Sku.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SKU.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SKU.edmx</DependentUpon>
-      <LastGenOutput>SKU.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="SKU.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SKU.edmx</DependentUpon>
-      <LastGenOutput>SKU1.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Sku.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sku.edmx</DependentUpon>
+      <LastGenOutput>Sku.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Sku.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sku.edmx</DependentUpon>
+      <LastGenOutput>Sku1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,8 +11,8 @@ namespace SkuManager.BusinessService
     {
         public void TestMethod()
         {
-            SKUEntities context = new SKUEntities();
-            var listOfPromotion = context.Promotions;
+            SKUCS context = new SKUCS();
+            var listOfPromotion = context.Promotion;
         }
     }
 }

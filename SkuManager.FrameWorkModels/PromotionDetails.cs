@@ -12,7 +12,7 @@ namespace SkuManager.FrameWorkModels
     using System;
     using System.Collections.Generic;
     
-    public partial class PromotionDetail
+    public partial class PromotionDetails
     {
         public long Id { get; set; }
         public Nullable<long> PromotionId { get; set; }

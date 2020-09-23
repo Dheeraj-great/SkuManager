@@ -9,9 +9,25 @@
 <div class="panel panel-default">
     <div class="panel-heading"><strong>SKU List</strong></div>
     <div class="panel-body">
-        @if(Model.SkuList != null && Model.SkuList.Count > 0)
+        @if (Model.SkuList != null && Model.SkuList.Count > 0)
         {
-
+            <table class="table table-bordered table-responsive table-striped">
+                <thead>
+                    <tr>
+                        <th>Sku Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.SkuList)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <th><input class="form-control" /></th>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         }
     </div>
 </div>

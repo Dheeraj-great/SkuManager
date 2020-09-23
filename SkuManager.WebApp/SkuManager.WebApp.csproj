@@ -192,6 +192,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SkuManager.BusinessService\SkuManager.BusinessService.csproj">
+      <Project>{c0614ac2-5f17-408f-b369-c1254d743e13}</Project>
+      <Name>SkuManager.BusinessService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SkuManager.FrameWorkModels\SkuManager.FrameWorkModels.csproj">
       <Project>{6b9d7aac-4725-4c04-a7bd-2c7d096a6ded}</Project>
       <Name>SkuManager.FrameWorkModels</Name>
