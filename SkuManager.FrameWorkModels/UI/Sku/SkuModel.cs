@@ -10,6 +10,7 @@ namespace SkuManager.FrameWorkModels.UI.Sku
         public string Name { get; set; }
         public decimal? UnitPrice { get; set; }
         public bool? IsActive { get; set; }
+        public long? PurchaseQuantity { get; set; }
     }
 
     public class SkuIndexViewModel

@@ -74,7 +74,7 @@ namespace SkuManager.BusinessService
         /// </summary>
         /// <param name="promotionId"></param>
         /// <returns></returns>
-        public List<PromotionDetails> GetAllPromotionDetailsByPromotionId(long? promotionId)
+        public List<PromotionDetails> GetAllPromotionDetailsByPromotionId(long? promotionId = null)
         {
             List<PromotionDetails> resultList = new List<PromotionDetails>();
             using (this.connection)
